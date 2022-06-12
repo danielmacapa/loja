@@ -1,12 +1,12 @@
 <?php
 // inicia a sessão
 //session_start();
-//include ("conexao.php");
 $host = mysqli_connect("localhost", "root", "", "loja");
+
 // recupera os dados enviados pelo formulário (form_categoria)
 $descricao = $_POST["descricao"];
 $data = $_POST["data"];
-$codbar = $_POST["codbar"];
+$codbar = $_POST["codigo"];
 
 // gatilho para conexão com o banco 
 if (isset($_POST["submit"])){
@@ -19,7 +19,7 @@ if (isset($_POST["submit"])){
 
     // query de inserção
     $query = "INSERT INTO categorias 
-    VALUES ('', '$descricao', '$data', '$codbar');";
+    VALUES ('4', '$descricao', '$data', '$codbar');";
 
     // execução da query
     mysqli_query($host, $query);
