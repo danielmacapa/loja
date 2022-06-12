@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Tela de Cadastro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="titulo">
+            <H1>Cadastro de categorias</H1>
+        </div>
+        <div id="form">
+            <form action="../php/cadastrar/cadastrar_categoria.php" method="post">
+                <h2>Informe os dados para cadastro:</h2>
+
+                <p>Descrição:</p>
+                <input type="text" size="45" name="descricao" autofocus
+                 required><br><br>
+
+                <p>Data de Cadastro:</p>
+                <input type="data" name="data"><br><br>
+                
+                <p>Código de Barra:</p>
+                <input type="text" name="codigo"><br><br>
+
+                <input type="submit" name="submit" value="Enviar">
+                <input type="reset" value="Limpar"><br><br>
+                <input type="button" value="Voltar" 
+                onclick="location.href='../index_menu.html'"> 
+            </form>   
+        </div>
+    </body>
+</html>

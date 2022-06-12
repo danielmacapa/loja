@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="titulo">
+            Selecione a opção desejada:
+        </div>
+        <div id="menu">
+            <br> <table>
+                <tr>
+                    <td>CADASTRAR<br><br>
+                    <input type="button" value="Categoria   " size="20" onclick="location.href='/loja/html/form_categoria.html'"><br>
+                    <input type="button" value="Cliente        " size="20" onclick="location.href='/loja/html/form_cliente.html'"><br>
+                    <input type="button" value="Funcionário" size="20" onclick="location.href='/loja/html/form_funcionario.html'"><br>
+                    <input type="button" value="Produto      " size="20" onclick="location.href='/loja/html/form_produto.html'">
+                    </td>
+                    <td></td>
+
+                    <td><br><br>
+                    <input type="button" value="Listar" size="20" onclick="location.href='/loja/php/listar/listar_categoria.php'"><br>
+                    <input type="button" value="Listar" size="20" onclick="location.href='/loja/php/listar/listar_cliente.php'"><br>
+                    <input type="button" value="Listar" size="20" onclick="location.href='/loja/php/listar/listar_funcionario.php'"><br>
+                    <input type="button" value="Listar" size="20" onclick="location.href='/loja/php/listar/listar_produto.php'">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="button" value="Sair" 
+                onclick="location.href='../loja/index.html'">
+         
+        </div>
+    
+    </body>
+</html>

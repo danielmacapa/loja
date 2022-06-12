@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Tela de Cadastro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="titulo">
+            <H1>Cadastro de funcionários</H1>
+        </div>
+        <div id="form">
+            <form action="" method="post"></form>
+                <h2>Informe os dados para cadastro:</h2>
+
+                <p>Nome completo:</p>
+                <input type="text" size="45" name="nome" autofocus required><br><br>
+                <p>CPF:</p>
+                <input type="text" maxlength="11" name="cpf" required
+                placeholder="somente números"><br><br>
+                <p>Data de Nascimento:</p>
+                <input type="data" maxlength="10" name="data" required
+                placeholder="formato dd/mm/yyyy"><br><br>
+                <p>E-mail:</p>
+                <input type="email" name="email" required><br><br>
+                <p>Endereço: </p>
+                <input type="text" size="45" name="endereco" required><br><br>                
+
+                <p>Usuário:</p>
+                <input type="text" size="45" name="usuario" required><br><br>
+                <p>Senha:</p>
+
+                <input type="password" name="senha" required><br><br>
+                <input type="submit" name="submit" value="Enviar">
+                <input type="reset" value="Limpar"><br><br>
+                <input type="button" value="Voltar" 
+                onclick="location.href='../index_menu.html'">
+            </form>   
+        </div>
+    </body>
+</html>

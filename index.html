@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Tela de Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="titulo">
+        <H1>TELA DE LOGIN</H1>
+        </div>
+        <div id="form">
+            <h2>Informe usuário e senha:</h2>
+            <form action="../loja/php/valida_usuario.php" method="post">
+                <p>Usuário:</p>
+                <input type="text" size="45" name="usuario" autofocus
+                required autocomplete="off"><br><br>
+                <p>Senha:</p>
+                <input type="password" name="senha" required><br><br>
+                <input type="submit" name="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </form>   
+        </div>
+    </body>
+</html>
