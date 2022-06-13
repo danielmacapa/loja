@@ -11,21 +11,15 @@
             <H1>Cadastro de clientes</H1>
         </div>
         <div id="form">
-            <form action="" method="post"></form>
+            <form action="../php/cadastrar/cadastrar_cliente.php" method="post">
                 <h2>Informe os dados para cadastro:</h2>
                 
-                <p>Nome completo:</p>
-                <input type="text" size="45" name="nome" autofocus required><br><br>
-                <p>CPF:</p>
-                <input type="text" maxlength="11" name="cpf" required
+                Nome completo:<input type="text" size="45" name="nome" autofocus required><br><br>
+                CPF:<input type="text" maxlength="11" name="cpf" required
                 placeholder="somente números"><br><br>
-                <p>Data de Nascimento:</p>
-                <input type="text" maxlength="10" name="data" required
-                placeholder="formato dd/mm/yyyy"><br><br>
-                <p>E-mail:</p>
-                <input type="email" name="email" required><br><br>
-                <p>Endereço: </p>
-                <input type="text" size="45" name="endereco" required><br><br>                
+                Data de Nascimento:<input type="date" name="data"><br><br>
+                E-mail:<input type="email" name="email"><br><br>
+                Endereço:<input type="text" size="45" name="endereco"><br><br>               
 
                 <input type="submit" name="submit" value="Enviar">
                 <input type="reset" value="Limpar"><br><br>

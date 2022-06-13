@@ -10,8 +10,8 @@ if(mysqli_affected_rows($host)){
     while ($dados = mysqli_fetch_array($exec)){
         echo "ID: ".$dados['id_produtos']."<br>";
         echo "Descrição: ".$dados['descricao']."<br>";
-        echo "Data de cadastro: ".$dados['data_cadastro']."<br><br>";
-        echo "Código de barras: ".$dados['codigo_barras']."<br><br>";
+        echo "Categoria: ".$dados['categoria']."<br>";
+        echo "Quantidade: ".$dados['quantidade']."<br>";
         echo "Preço: ".$dados['preco']."<br><br>";
     }
 }

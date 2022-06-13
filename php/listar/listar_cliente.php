@@ -13,7 +13,7 @@ if(mysqli_affected_rows($host)){
         echo "CPF: ".$dados['cpf']."<br>";
         echo "Data de Nascimento: ".$dados['data']."<br>";
         echo "E-mail: ".$dados['email']."<br>";
-        echo "Endereço: ".$dados['endereco']."<br>";
+        echo "Endereço: ".$dados['endereco']."<br><br>";
     }
 }
 echo "<input type='button' value='Voltar' 
