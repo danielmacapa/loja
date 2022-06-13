@@ -7,26 +7,35 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <img src="https://i.imgur.com/7ZFSvUg.png" width="300"/>
+        </header>
         <div id="titulo">
-            Selecione a opção desejada:
+        <h3>CADASTRO E CONSULTA</h3> 
         </div>
         <div id="menu">
-            <br> <table>
+            <h4>Selecione a opção desejada:</h4>
+            <table>
                 <tr>
-                    <td>CADASTRAR<br><br>
-                    <input type="button" value="Categoria   " size="20" onclick="location.href='/loja/html/form_categoria.html'"><br>
-                    <input type="button" value="Cliente        " size="20" onclick="location.href='/loja/html/form_cliente.html'"><br>
-                    <input type="button" value="Funcionário" size="20" onclick="location.href='/loja/html/form_funcionario.html'"><br>
-                    <input type="button" value="Produto      " size="20" onclick="location.href='/loja/html/form_produto.html'">
-                    </td>
+                    <td>  Cadastrar</td>
                     <td></td>
-
-                    <td><br><br>
-                    <input type="button" value="Listar" size="20" onclick="location.href='/loja/php/listar/listar_categoria.php'"><br>
-                    <input type="button" value="Listar" size="20" onclick="location.href='/loja/php/listar/listar_cliente.php'"><br>
-                    <input type="button" value="Listar" size="20" onclick="location.href='/loja/php/listar/listar_funcionario.php'"><br>
-                    <input type="button" value="Listar" size="20" onclick="location.href='/loja/php/listar/listar_produto.php'">
-                    </td>
+                </tr>
+                <tr><td></td></tr>
+                <tr>
+                    <td><input type="button" value="CATEGORIA     " onclick="location.href='/loja/html/form_categoria.html'"></td>
+                    <td><input type="button" value="Consultar" onclick="location.href='/loja/php/listar/listar_categoria.php'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="CLIENTE          " onclick="location.href='/loja/html/form_cliente.html'"></td>
+                    <td><input type="button" value="Consultar" onclick="location.href='/loja/php/listar/listar_cliente.php'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="FUNCIONÁRIO" onclick="location.href='/loja/html/form_funcionario.html'"></td>
+                    <td><input type="button" value="Consultar" onclick="location.href='/loja/php/listar/listar_funcionario.php'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="PRODUTO       " onclick="location.href='/loja/html/form_produto.html'"></td>
+                    <td><input type="button" value="Consultar" onclick="location.href='/loja/php/listar/listar_produto.php'"></td>
                 </tr>
             </table>
             <br>

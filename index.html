@@ -7,19 +7,31 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <img src="https://i.imgur.com/7ZFSvUg.png" width="300"/>
+        </header>
         <div id="titulo">
-        <H1>TELA DE LOGIN</H1>
+        <h3>LOGIN</h3>
         </div>
         <div id="form">
-            <h2>Informe usuário e senha:</h2>
+            <h4>Informe usuário e senha:</h4>
             <form action="../loja/php/valida_usuario.php" method="post">
-                <p>Usuário:</p>
-                <input type="text" size="45" name="usuario" autofocus
-                required autocomplete="off"><br><br>
-                <p>Senha:</p>
-                <input type="password" name="senha" required><br><br>
-                <input type="submit" name="submit" value="Enviar">
-                <input type="reset" value="Limpar">
+                <table>
+                    <tr>
+                        <td>Usuário:</td>
+                        <td><input type="text" name="usuario" autofocus
+                        required autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>Senha:</td>
+                        <td><input type="password" name="senha" required></td>
+                    </tr>
+                    <tr><td><br></td></tr>
+                    <tr>
+                        <td><input type="reset" value="Limpar"></td>
+                        <td><input type="submit" name="submit" value="Enviar"></td>
+                    </tr>
+                </table>
             </form>   
         </div>
     </body>
