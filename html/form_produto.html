@@ -13,16 +13,12 @@
         <div id="form">
             <form action="../php/cadastrar/cadastrar_produto.php" method="post">
                 <h2>Informe os dados para cadastro:</h2>
-                
-                Descrição:<input type="text" size="45" name="descricao" autofocus required><br><br>
-                Selecione a categoria do produto:
-                <select>
-                    <option value="Jogos de tabuleiro">Jogos de tabuleiro</option>
-                    <option value="RPG">RPG</option>
-                    <option value="Acessórios">Acessórios</option>
-                </select><br><br>
+
+                Título:<input type="text" size="45" name="titulo" 
+                autofocus required><br><br>
+                Descrição:<input type="text" size="45" name="descricao"><br><br>
                 Quantidade:<input type="number" name="quantidade"><br><br>
-                Preço:<input type="number" name="preco"><br><br>
+                Preço:<input type="text" size="10" name="preco"><br><br>
                 
                 <input type="submit" name="submit" value="Enviar">
                 <input type="reset" value="Limpar"><br><br>

@@ -1,6 +1,6 @@
 <?php
 // inicia a sessão
-$host = mysqli_connect("localhost", "root", "", "loja");
+$host = mysqli_connect("localhost", "root", "", "mydb");
 
 // recupera os dados enviados pelo formulário (form_funcionario)
 $nome = $_POST["nome"];
