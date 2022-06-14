@@ -20,8 +20,8 @@ if (isset($_POST["submit"])){
     mysqli_query($host, $query);
 
 // verifica se houve inserção e direciona conforme o resultado
-        if(mysqli_affected_rows($host)){
-            echo "<script> alert('Cadastro realizado');
+        if(mysqli_affected_rows($host) <> 0){
+            echo "<script> alert('Cadastro realizado com sucesso');
             location.href='/loja/index_menu.html'</script>";
         }
         else{

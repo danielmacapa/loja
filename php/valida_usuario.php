@@ -26,7 +26,7 @@ if (isset($_POST["submit"])){
 
     // verifica se há correspondência e direciona conforme o resultado
     if(mysqli_num_rows($exec) <> 0){
-        echo "<script> alert('Login Realizado');
+        echo "<script> alert('Login realizado com sucesso');
         location.href='../index_menu.html'</script>";
     }else{
         echo "<script>alert('Usuário ou senha inválidos');

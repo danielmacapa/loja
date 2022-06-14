@@ -4,21 +4,33 @@
         <title>Tela de Cadastro</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
     </head>
     <body>
         <div id="titulo">
-            <H1>Cadastro de produtos</H1>
+            <h4>CADASTRO DE PRODUTOS</h4>
         </div>
         <div id="form">
+            <h5>Informe os dados para cadastro:</h5>
             <form action="../php/cadastrar/cadastrar_produto.php" method="post">
-                <h2>Informe os dados para cadastro:</h2>
-
-                Título:<input type="text" size="45" name="titulo" autofocus required><br><br>
-                Descrição:<input textarea name="descricao"><br><br>
-                Quantidade:<input type="number" min="0" value="0" name="quantidade"><br><br>
-                Preço:<input type="text" size="10" name="preco"><br><br>
-                
+                <table>
+                    <tr>
+                        <td>Título:</td>
+                        <td><input type="text" name="titulo" autofocus required></td>
+                    </tr>
+                    <tr>
+                        <td>Descrição:</td>
+                        <td><textarea name="descricao"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Quantidade:</td>
+                        <td><input type="number" min="0" value="0" name="quantidade"></td>
+                    </tr>
+                    <tr>
+                        <td>Preço:</td>
+                        <td><input type="text" name="preco"></td>
+                    </tr>
+                </table><br>
                 <input type="submit" name="submit" value="Enviar">
                 <input type="reset" value="Limpar"><br><br>
                 <input type="button" value="Voltar" 

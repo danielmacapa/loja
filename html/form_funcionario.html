@@ -4,27 +4,48 @@
         <title>Tela de Cadastro</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
     </head>
     <body>
         <div id="titulo">
-            <H1>Cadastro de funcionários</H1>
+            <h4>CADASTRO DE FUNCIONÁRIOS</h4>
         </div>
         <div id="form">
+            <h5>Informe os dados para cadastro:</h5>
             <form action="../php/cadastrar/cadastrar_funcionario.php" method="post">
-                <h2>Informe os dados para cadastro:</h2>
-
-                Nome completo:<input type="text" size="45" name="nome" 
-                autofocus required><br><br>
-                CPF:<input type="text" maxlength="11" name="cpf"
-                placeholder="somente números"><br><br>
-                Data de Nascimento:<input type="date" name="data"><br><br>
-                E-mail:<input type="email" name="email"><br><br>
-                Endereço: <input type="text" size="45" name="endereco"><br><br>           
-
-                Usuário:<input type="text" size="45" name="usuario" required><br><br>
-                Senha:<input type="password" name="senha" required><br><br>
-
+                <table>
+                    <tr>
+                        <td>Nome completo:</td>
+                        <td><input type="text" name="nome" 
+                            autofocus required></td>
+                    </tr>
+                    <tr>
+                        <td>CPF:</td>
+                        <td><input type="text" maxlength="11" name="cpf"
+                            placeholder="somente números"></td>
+                    </tr>
+                    <tr>
+                        <td>Data de Nascimento:</td>
+                        <td><input type="date" name="data"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Endereço:</td>
+                        <td><input type="text" name="endereco"></td>
+                    </tr>
+                    <tr>
+                        <td>Usuário:</td>
+                        <td><input type="text" name="usuario" required></td>
+                    </tr>
+                    <tr>
+                        <td>Senha:</td>
+                        <td><input type="password" name="senha" required></td>
+                    </tr>
+                </table><br> 
+                
                 <input type="submit" name="submit" value="Enviar">
                 <input type="reset" value="Limpar"><br><br>
                 <input type="button" value="Voltar" 
