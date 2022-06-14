@@ -10,8 +10,8 @@ if(mysqli_affected_rows($host)){
     while ($dados = mysqli_fetch_array($exec)){
         echo "ID: ".$dados['id_categorias']."<br>";
         echo "Descrição: ".$dados['descricao']."<br>";
-        echo "Data de cadastro: ".$dados['data_cadastro']."<br><br>";
-        echo "Código de barras: ".$dados['codigo_barras']."<br><br>";
+        echo "Data de cadastro: ".$dados['data']."<br>";
+        echo "Código de barras: ".$dados['codbar']."<br><br>";
     }
 }
 echo "<input type='button' value='Voltar' 
