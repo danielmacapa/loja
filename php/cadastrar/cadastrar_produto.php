@@ -1,6 +1,5 @@
 <?php
 // inicia a sessão
-//session_start();
 $host = mysqli_connect("localhost", "root", "", "mydb");
 
 // recupera os dados enviados pelo formulário (form_produto)
@@ -14,7 +13,7 @@ if (isset($_POST["submit"])){
     
     // query de inserção
     $query = "INSERT INTO produtos 
-    VALUES (default, '$titulo', $descricao', '$quantidade', '$preco');";
+    VALUES (default, '$titulo', '$descricao', '$quantidade', '$preco');";
 
     // execução da query
     mysqli_query($host, $query);
