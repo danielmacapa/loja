@@ -1,25 +1,42 @@
 <?php
+// inicia a sessão
 $host = mysqli_connect("localhost", "root", "", "mydb");
 
-$query = "SELECT * FROM clientes";
+// comando SQL para trazer os dados do registro de acordo com ID
+$query = "SELECT * FROM clientes;";
+
+// execução da query
 $exec = mysqli_query($host, $query);
 
-if(mysqli_affected_rows($host)){
-    echo "<h3>LISTA DE CLIENTES</h3>";
+echo "
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nome Completo</th>
+        <th>CPF</th>
+        <th>Data de Nascimento</th>
+        <th>E-mail</th>
+        <th>Endereço</th>
+        <th>AÇÕES</th>
+    </tr>";
 
-    while ($dados = mysqli_fetch_array($exec)){
-        echo "ID: ".$dados['idclientes']."<br>";
-        echo "Nome Completo: ".$dados['nome']."<br>";
-        echo "CPF: ".$dados['cpf']."<br>";
-        echo "Data de Nascimento: ".$dados['data']."<br>";
-        echo "E-mail: ".$dados['email']."<br>";
-        echo "Endereço: ".$dados['endereco']."<br>";
-        echo "----"."<br>";
-    }
+while ($dados = mysqli_fetch_array($exec)){
+    echo "<form method='post' action='../alterar/alterar_cliente.php'>";
+    $id = $dados["idclientes"];
+    echo "<tr>";
+    echo "<td>".$dados['idclientes']."</td>";
+    echo "<td>".$dados['nome']."</td>";
+    echo "<td>".$dados['cpf']."</td>";
+    echo "<td>".$dados['data']."</td>";
+    echo "<td>".$dados['email']."</td>";
+    echo "<td>".$dados['endereco']."</td>";
+    echo "<td><input type='hidden' name='id' value='$id'></td>"; 
+    echo "<td><input type='submit' name='alt' value='Alterar'></td>";
+    echo "<td><input type='submit' name='rem' value='Remover'></td>";
+    echo "</tr>";
+    echo "</form>";
 }
-echo "<input type='button' value='Imprimir' 
-onclick='window.print()'>          ";
-echo "<input type='button' value='Voltar' 
-onclick=location.href='/loja/index_menu.html'>";
+    echo "</table>";
+
 
 ?>
