@@ -1,6 +1,4 @@
 <?php
-// inicia a sessão
-$host = mysqli_connect("localhost", "root", "", "mydb");
 
 // recupera os dados enviados pelo formulário (form_funcionario)
 $nome = $_POST["nome"];
@@ -13,7 +11,10 @@ $senha = $_POST["senha"];
 
 // gatilho para conexão com o banco 
 if (isset($_POST["submit"])){
-    
+
+    // conexão com banco 
+    include ("../php/conexao.php");
+
     // query de inserção
     $query = "INSERT INTO funcionarios 
     VALUES (default, '$nome', '$cpf', '$data', '$email', '$endereco', '$usuario', '$senha');";

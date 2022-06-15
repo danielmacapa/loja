@@ -1,6 +1,7 @@
 <?php
 // inicia a sessão
-$host = mysqli_connect("localhost", "root", "", "mydb");
+// session_start();
+
 
 // recupera os dados enviados pelo formulário (form_cliente)
 $nome = $_POST["nome"];
@@ -11,6 +12,11 @@ $endereco = $_POST["endereco"];
 
 // gatilho para conexão com o banco 
 if (isset($_POST["submit"])){
+
+    //$host = mysqli_connect("localhost", "root", "", "mydb");
+
+    // conexão com banco 
+    include ("../conexao.php");
     
     // query de inserção
     $query = "INSERT INTO clientes 

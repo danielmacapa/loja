@@ -1,6 +1,5 @@
 <?php
-// inicia a sessão
-$host = mysqli_connect("localhost", "root", "", "mydb");
+
 
 // recupera os dados enviados pelo formulário (form_produto)
 $titulo = $_POST["titulo"];
@@ -10,6 +9,9 @@ $preco = $_POST["preco"];
 
 // gatilho para conexão com o banco 
 if (isset($_POST["submit"])){
+
+    // conexão com banco 
+    include ("../php/conexao.php");
     
     // query de inserção
     $query = "INSERT INTO produtos 
