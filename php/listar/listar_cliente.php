@@ -8,7 +8,7 @@ $query = "SELECT * FROM clientes;";
 // execução da query
 $exec = mysqli_query($host, $query);
 
-echo "
+echo "<div id='tabela'> 
 <table>
     <tr>
         <th>ID</th>
@@ -36,7 +36,7 @@ while ($dados = mysqli_fetch_array($exec)){
     echo "</tr>";
     echo "</form>";
 }
-    echo "</table>";
+    echo "</table></div>";
 
 
 ?>
