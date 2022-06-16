@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Tela de Cadastro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="https://i.imgur.com/7ZFSvUg.png" width="300"/>
+        </header>
+
+        <div id="titulo">
+            <h4>CADASTRO DE CATEGORIAS</h4>
+        </div>
+        <div id="form">
+            <h5>Informe os dados para cadastro:</h5>
+            <form action="../php/cadastrar/cadastrar_categoria.php" method="post">
+                <table>
+                    <tr>
+                        <td>Título:</td>
+                        <td><input type="text" name="titulo" autofocus required></td>
+                    </tr>
+                    <tr>
+                        <td>Descrição:</td>
+                        <td><textarea name="descricao"></textarea></td>
+                    </tr>
+                </table><br>
+                <input type="submit" name="submit" value="Enviar">
+                <input type="reset" value="Limpar"><br><br>
+                <input type="button" value="Voltar" 
+                onclick="location.href='../index_menu.html'">
+            </form>   
+        </div>
+    </body>
+</html>

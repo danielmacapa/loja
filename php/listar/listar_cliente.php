@@ -37,8 +37,9 @@ while ($dados = mysqli_fetch_array($exec)){
     echo "</form>";
 }
     echo "</table></div><br>";
-    echo "<input type='button' value='Sair' 
+    echo "<input type='button' value='Imprimir' 
+    onclick='window.print()'>          ";
+    echo "<input type='button' value='Voltar' 
     onclick=location.href='/loja/index_menu.html'>";
-
 
 ?>
