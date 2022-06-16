@@ -1,6 +1,6 @@
 <?php
-// inicia a sessão
-$host = mysqli_connect("localhost", "root", "", "mydb");
+// conexão com banco 
+include ("../conexao.php");
 
 // comando SQL para trazer os dados do registro de acordo com ID
 $query = "SELECT * FROM clientes;";
@@ -36,7 +36,9 @@ while ($dados = mysqli_fetch_array($exec)){
     echo "</tr>";
     echo "</form>";
 }
-    echo "</table></div>";
+    echo "</table></div><br>";
+    echo "<input type='button' value='Sair' 
+    onclick=location.href='/loja/index_menu.html'>";
 
 
 ?>

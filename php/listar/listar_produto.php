@@ -1,5 +1,6 @@
 <?php
-$host = mysqli_connect("localhost", "root", "", "mydb");
+// conexão com banco 
+include ("../conexao.php");
 
 $query = "SELECT * FROM produtos";
 $exec = mysqli_query($host, $query);

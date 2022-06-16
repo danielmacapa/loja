@@ -10,13 +10,13 @@ if (isset($_POST["atu"])){
     $email = $_POST["email"];
     $endereco = $_POST["endereco"];
 
-    // inicia a sessão
-    $host = mysqli_connect("localhost", "root", "", "mydb");
+    // conexão com banco 
+    include ("../conexao.php");
 
     // query de atualização
     $query = "UPDATE clientes 
-    SET nome = '$nome', cpf = '$cpf', data = '$data', email = '$email', endereco = '$endereco')
-    WHERE idclientes = '$id';";
+    SET nome='$nome', cpf='$cpf', data='$data', email='$email', endereco='$endereco'
+    WHERE idclientes=$id;";
 
     // execução da query
     mysqli_query($host, $query);

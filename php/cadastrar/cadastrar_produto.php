@@ -11,7 +11,7 @@ $preco = $_POST["preco"];
 if (isset($_POST["submit"])){
 
     // conexão com banco 
-    include ("../php/conexao.php");
+    include ("../conexao.php");
     
     // query de inserção
     $query = "INSERT INTO produtos 

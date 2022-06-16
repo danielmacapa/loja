@@ -1,10 +1,10 @@
 <?php
-// inicia a sessão
-$host = mysqli_connect("localhost", "root", "", "mydb");
+// conexão com banco 
+include ("../conexao.php");
 
 // comando SQL para remover o registro de acordo com ID
 $query = "DELETE FROM clientes WHERE 
-idclientes = '$categoria'";
+idclientes = '$id'";
 
 // execução da query
 $exec = mysqli_query($host, $query);
