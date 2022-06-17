@@ -10,6 +10,10 @@ body {
 
 }
 
+label {
+    font-size:small; 
+}
+
 #menu1{
     text-align: center;
     font-size:small;

@@ -21,17 +21,17 @@ if (isset($_POST["alt"])){
         echo "<tr><td>CPF:</td>";
         echo "<td><input type='text' maxlength='11' name='cpf' value='$dados[cpf]'></td></tr>";
         echo "<tr><td>Data de Nascimento:</td>";
-        echo "<td><input type='date' maxlength='10' name='data' value='$dados[data]'</td></tr>";
+        echo "<td><input type='date' maxlength='10' name='data' value='$dados[data]'></td></tr>";
         echo "<tr><td>E-mail:</td>";
         echo "<td><input type='text' name='email' value='$dados[email]'></td></tr>";
         echo "<tr><td>Endereço:</td>";
         echo "<td><input type='textarea' name='endereco' value='$dados[endereco]'></td></tr>";
-        echo "</table>";
-        echo "<td><input type='text' name='usuario' value='$dados[usuario]'></td></tr>";
         echo "<tr><td>Usuário:</td>";
-        echo "<td><input type='password' name='senha' value='$dados[senha]'></td></tr>";
+        echo "<td><input type='text' name='usuario' value='$dados[usuario]'></td></tr>";
         echo "<tr><td>Senha:</td><br>";
-        //o botão Atualizar envia os dadops do formulário para alterar_funcionario.php
+        echo "<td><input type='password' name='senha' value='$dados[senha]'></td></tr>";
+        echo "</table><br>";
+        //o botão Atualizar envia os dados do formulário para atualizar_funcionario.php
         echo "<input type='submit' name='atu' value='Atualizar'>";
         echo "</form>";
     }

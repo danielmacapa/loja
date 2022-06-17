@@ -34,6 +34,23 @@
                         <td>Preço:</td>
                         <td><input type="text" name="preco"></td>
                     </tr>
+                    <tr>
+                        <td>Categoria:</td>
+                        <td><select name='idcategoria'>
+                        <option value=''>Selecione uma categoria:</option>
+
+                        <?php
+                        include ("../php/conexao.php");
+                        $query = "SELECT * FROM categorias";
+                        $exec = mysqli_query($host, $query);
+
+                        while ($dados = mysqli_fetch_array($exec)){
+                            $id = $dados["id_categorias"];
+                            $titulo = $dados["titulo"];
+                            echo "<option value='$id'>$titulo</option>";
+                        }?>
+                        </select></td>
+                    </tr>
                 </table><br>
                 <input type="submit" name="submit" value="Enviar">
                 <input type="reset" value="Limpar"><br><br>

@@ -1,25 +1,19 @@
 <?php
 
-// recupera os dados enviados pelo formulário (alterar_funcionario)
+// recupera os dados enviados pelo formulário (alterar_categoria)
 if (isset($_POST["atu"])){
 
     $id = $_POST["id"];
-    $nome = $_POST["nome"];
-    $cpf = $_POST["cpf"];
-    $data = $_POST["data"];
-    $email = $_POST["email"];
-    $endereco = $_POST["endereco"];
-    $usuario = $_POST["usuario"];
-    $senha = $_POST["senha"];
+    $titulo = $_POST["titulo"];
+    $descricao = $_POST["descricao"];
 
     // conexão com banco 
     include ("../conexao.php");
 
     // query de atualização
-    $query = "UPDATE funcionarios 
-    SET nome='$nome', cpf='$cpf', data='$data', email='$email', 
-    endereco='$endereco', usuario='$usuario', senha='$senha'
-    WHERE idfuncionarios=$id;";
+    $query = "UPDATE categorias 
+    SET titulo='$titulo', descricao='$descricao'
+    WHERE idcategorias=$id;";
 
     // execução da query
     mysqli_query($host, $query);

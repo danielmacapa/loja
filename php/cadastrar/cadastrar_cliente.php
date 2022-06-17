@@ -12,6 +12,9 @@ if (isset($_POST["submit"])){
 
     // conexão com banco 
     include ("../conexao.php");
+    if($host){
+        echo "Conexão OK";
+        }
     
     // query de inserção
     $query = "INSERT INTO clientes 
@@ -21,7 +24,7 @@ if (isset($_POST["submit"])){
     mysqli_query($host, $query);
 
 // verifica se houve inserção e direciona conforme o resultado
-        if(mysqli_affected_rows($host) <> 0){
+        if(mysqli_affected_rows($host)){
             echo "<script> alert('Cadastro realizado com sucesso');
             location.href='/loja/index_menu.html'</script>";
         }

@@ -1,6 +1,4 @@
 <?php
-// inicia a sessão
-session_start();
 
 // recupera os dados enviados pelo formulário (index)
 $usuario = $_POST["usuario"];
@@ -13,9 +11,9 @@ if (isset($_POST["submit"])){
     include ("conexao.php");
     
     // testa a conexão com o banco
-    //if($host){
-    //    echo "Conexão OK";
-    //}
+    /* if($host){
+    echo "Conexão OK";
+    }*/
 
     // consulta o banco em busca de usuário e senha informados
     $query = "SELECT * FROM funcionarios WHERE usuario = '$usuario'
