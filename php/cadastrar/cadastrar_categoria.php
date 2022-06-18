@@ -2,7 +2,7 @@
 
 
 // recupera os dados enviados pelo formulário (form_categoria)
-$titulo = $_POST["titulo"];
+$nome = $_POST["nome"];
 $descricao = $_POST["descricao"];
 
 // gatilho para conexão com o banco 
@@ -13,7 +13,7 @@ if (isset($_POST["submit"])){
     
     // query de inserção
     $query = "INSERT INTO categorias 
-    VALUES (default, '$titulo', '$descricao');";
+    VALUES (default, '$nome', '$descricao');";
 
     // execução da query
     mysqli_query($host, $query);

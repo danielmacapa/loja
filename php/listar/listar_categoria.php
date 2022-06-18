@@ -22,7 +22,7 @@ echo "<div id='tabela'>
 <table>
     <tr>
         <th>ID</th>
-        <th>Título</th>
+        <th>Nome</th>
         <th>Descrição</th>
         <th>AÇÕES</th>
     </tr>";
@@ -33,7 +33,7 @@ while ($dados = mysqli_fetch_array($exec)){
     $id = $dados["idcategorias"];
     echo "<tr>";
     echo "<td>".$dados['idcategorias']."</td>";
-    echo "<td>".$dados['titulo']."</td>";
+    echo "<td>".$dados['nome']."</td>";
     echo "<td>".$dados['descricao']."</td>";
     echo "<td><input type='hidden' name='id' value='$id'></td>"; 
     echo "<td><input type='submit' name='alt' value='Alterar'></td>";

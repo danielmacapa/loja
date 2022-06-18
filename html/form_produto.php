@@ -36,7 +36,7 @@
                     </tr>
                     <tr>
                         <td>Categoria:</td>
-                        <td><select name='idcategoria'>
+                        <td><select name='idcategorias'>
                         <option value=''>Selecione uma categoria:</option>
 
                         <?php
@@ -45,9 +45,9 @@
                         $exec = mysqli_query($host, $query);
 
                         while ($dados = mysqli_fetch_array($exec)){
-                            $id = $dados["id_categorias"];
-                            $titulo = $dados["titulo"];
-                            echo "<option value='$id'>$titulo</option>";
+                            $id = $dados["idcategorias"];
+                            $nome = $dados["nome"];
+                            echo "<option value='$id'>$nome</option>";
                         }?>
                         </select></td>
                     </tr>

@@ -9,13 +9,15 @@ if (isset($_POST["atu"])){
     $descricao = $_POST["descricao"];
     $quantidade = $_POST["quantidade"];
     $preco = $_POST["preco"];
+    $categoria = $_POST["categoria"];
 
     // conexão com banco 
     include ("../conexao.php");
 
     // query de atualização
     $query = "UPDATE produtos 
-    SET titulo='$titulo', descricao='$descricao', quantidade='$quantidade', preco='$preco'
+    SET titulo='$titulo', descricao='$descricao', quantidade='$quantidade', 
+    preco='$preco', categoria = '$categoria'
     WHERE idprodutos=$id;";
 
     // execução da query

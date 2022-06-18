@@ -15,12 +15,12 @@ if (isset($_POST["submit"])){
     include ("../conexao.php");
     
     // query de inserção
-    $query = "INSERT INTO produtos ('idprodutos', 'titulo', 'descricao', 'quantidade', 'preco', 
-    'categorias_idcategorias') 
-    VALUES (default, '$titulo', '$descricao', '$quantidade', '$preco', '$idcategorias');";
-
-    // $query = "INSERT INTO produtos 
+    // $query = "INSERT INTO produtos ('idprodutos', 'titulo', 'descricao', 'quantidade', 'preco', 
+    // 'categorias_idcategorias') 
     // VALUES (default, '$titulo', '$descricao', '$quantidade', '$preco', '$idcategorias');";
+
+    $query = "INSERT INTO produtos 
+    VALUES (default, '$titulo', '$descricao', '$quantidade', '$preco', '$idcategorias');";
 
     // execução da query
     mysqli_query($host, $query);

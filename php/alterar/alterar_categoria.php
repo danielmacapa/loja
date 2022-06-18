@@ -15,7 +15,7 @@ if (isset($_POST["alt"])){
         echo "<table>";
         echo "<td><input type='hidden' name='id' value='$dados[idcategorias]'></td></tr>";
         echo "<tr><td>Título:</td>";
-        echo "<td><input type='text' name='titulo' value='$dados[titulo]'></td></tr>";
+        echo "<td><input type='text' name='nome' value='$dados[nome]'></td></tr>";
         echo "<tr><td>Descrição:</td>";
         echo "<td><input type='textarea' name='descricao' value='$dados[descricao]'></td></tr>";
         echo "</table><br>";

@@ -20,11 +20,11 @@ $query = "SELECT * FROM produtos";
 $exec = mysqli_query($host, $query);
 
 //importa dados de categorias
-$query2 = "SELECT * FROM categorias";
+/*$query2 = "SELECT * FROM categorias";
 $exec2 = mysqli_query($host, $query2);
 while ($dados2 = mysqli_fetch_array($exec2)){
-    $titulo_categorias = $dados2["idcategorias"];
-}
+    $titulo_categorias = $dados2["categorias_idcategorias"];
+}*/
 
 
 //cabeçalho da tabela
@@ -44,13 +44,19 @@ echo "<div id='tabela'>
 while ($dados = mysqli_fetch_array($exec)){
     echo "<form method='post' action='../alterar/alterar_produto.php'>";
     $id = $dados["idprodutos"];
+    $idcat = $dados["categorias_idcategorias"];
     echo "<tr>";
     echo "<td>".$dados['idprodutos']."</td>";
     echo "<td>".$dados['titulo']."</td>";
     echo "<td>".$dados['descricao']."</td>";
     echo "<td>".$dados['quantidade']."</td>";
     echo "<td>".$dados['preco']."</td>";
-    echo "<td>".$dados[$titulo_categorias]."</td>";
+    //importa dados de categorias
+    $query2 = "SELECT * FROM categorias 
+    WHERE idcategorias = '$idcat'";
+    $exec2 = mysqli_query($host, $query2);
+    $dados2 = mysqli_fetch_array($exec2);
+    echo "<td>".$dados2['nome']."</td>";
     echo "<td><input type='hidden' name='id' value='$id'></td>"; 
     echo "<td><input type='submit' name='alt' value='Alterar'></td>";
     echo "<td><input type='submit' name='rem' value='Remover'></td>";
