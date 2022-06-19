@@ -26,17 +26,21 @@ if (isset($_POST["alt"])){
         echo "<td><input type='text' name='preco' value='$dados[preco]'></td></tr>";
 
         echo "<tr><td>Categoria:</td>";
-        echo "<td><select name='idcategorias'>";
+        echo "<td><select required name='categoria'>";
         echo "<option value=''>Selecione uma categoria:</option>";
 
-        include ("../php/conexao.php");
         $query2 = "SELECT * FROM categorias";
         $exec2 = mysqli_query($host, $query2);
 
         while ($dados2 = mysqli_fetch_array($exec2)){
             $id2 = $dados2["idcategorias"];
             $nome = $dados2["nome"];
-            echo "<option value='$id2'>$nome</option>";
+            if($id2 == $dados['categorias_idcategorias']){
+                echo "<option selected value='$id2'>$nome</option>";
+            }
+            else{
+                echo "<option value='$id2'>$nome</option>";
+            }   
         }
             echo "</select></td></tr>";
 
@@ -52,7 +56,7 @@ if (isset($_POST["alt"])){
         location.href='/loja/index_menu.html'</script>";
     }
     else{
-        echo "<script>alert('Erro na remoção');
+        echo "<script>alert('Nenhum registro foi alterado');
         location.href='/loja/index_menu.html'</script>";
     }
 }

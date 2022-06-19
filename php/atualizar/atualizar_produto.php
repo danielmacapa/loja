@@ -17,8 +17,13 @@ if (isset($_POST["atu"])){
     // query de atualização
     $query = "UPDATE produtos 
     SET titulo='$titulo', descricao='$descricao', quantidade='$quantidade', 
-    preco='$preco', categoria = '$categoria'
+    preco='$preco', categorias_idcategorias = '$categoria'
     WHERE idprodutos=$id;";
+
+    // echo "<pre>";
+    //     print_r($query);
+    // echo "</pre>";
+    //     die();
 
     // execução da query
     mysqli_query($host, $query);

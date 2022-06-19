@@ -19,13 +19,6 @@ include ("../conexao.php");
 $query = "SELECT * FROM produtos";
 $exec = mysqli_query($host, $query);
 
-//importa dados de categorias
-/*$query2 = "SELECT * FROM categorias";
-$exec2 = mysqli_query($host, $query2);
-while ($dados2 = mysqli_fetch_array($exec2)){
-    $titulo_categorias = $dados2["categorias_idcategorias"];
-}*/
-
 
 //cabeçalho da tabela
 echo "<div id='tabela'> 
