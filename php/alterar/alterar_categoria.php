@@ -3,13 +3,13 @@
 $id = $_POST["id"];
 
 // conexão com banco 
-include ("../conexao.php");
+include("../conexao.php");
 
-if (isset($_POST["alt"])){
+if (isset($_POST["alt"])) {
     $query = "SELECT * FROM categorias WHERE idcategorias = $id;";
     $exec = mysqli_query($host, $query);
 
-    while ($dados = mysqli_fetch_array($exec)){
+    while ($dados = mysqli_fetch_array($exec)) {
         echo "<form method='post' action='../atualizar/atualizar_categoria.php'>";
 
         echo "<table>";
@@ -19,20 +19,25 @@ if (isset($_POST["alt"])){
         echo "<tr><td>Descrição:</td>";
         echo "<td><input type='textarea' name='descricao' value='$dados[descricao]'></td></tr>";
         echo "</table><br>";
-    
+
         echo "<input type='submit' name='atu' value='Atualizar'>";
         echo "</form>";
     }
-}else{
-    $query = "DELETE FROM categorias WHERE idcategorias = $id;";
-    $exec = mysqli_query($host, $query);
-    if(mysqli_affected_rows($host) <> 0){
+} else {
+
+    // limpa chave estrangeira
+    $query = "UPDATE produtos SET categorias_idcategorias = '6' 
+    WHERE categorias_idcategorias = $id;";
+    mysqli_query($host, $query);
+    // deleta registro de categoria
+    $query2 = "DELETE FROM categorias WHERE idcategorias = $id;";
+    mysqli_query($host, $query2);
+
+    if (mysqli_affected_rows($host) <> 0) {
         echo "<script> alert('Removido com sucesso');
         location.href='/loja/index_menu.html'</script>";
-    }
-    else{
+    } else {
         echo "<script>alert('Erro na remoção');
         location.href='/loja/index_menu.html'</script>";
     }
 }
-?>

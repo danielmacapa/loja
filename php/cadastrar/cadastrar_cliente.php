@@ -12,9 +12,9 @@ if (isset($_POST["submit"])){
 
     // conexão com banco 
     include ("../conexao.php");
-    if($host){
-        echo "Conexão OK";
-        }
+    // if($host){
+    //     echo "Conexão OK";
+    //     }
     
     // query de inserção
     $query = "INSERT INTO clientes 
@@ -35,4 +35,3 @@ if (isset($_POST["submit"])){
         
 
 }
-?>
