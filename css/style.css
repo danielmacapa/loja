@@ -14,16 +14,24 @@ label {
     font-size:small; 
 }
 
+#form{
+    border-color: dodgerblue;
+}
+#menu{
+    background-color:dodgerblue;
+}
+
 #menu1{
     text-align: center;
     font-size:small;
     
 }
 
-#tabela{
-    border:2px;
+#tabela, th, td{
+    text-align: left;
+    border:1px solid black ;
+    
 }
-
 
 
 
