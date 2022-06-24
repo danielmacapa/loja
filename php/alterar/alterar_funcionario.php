@@ -39,7 +39,7 @@
             echo "<tr><td>E-mail:</td>";
             echo "<td><input type='text' name='email' value='$dados[email]'></td></tr>";
             echo "<tr><td>Endereço:</td>";
-            echo "<td><input type='textarea' name='endereco' value='$dados[endereco]'></td></tr>";
+            echo "<td><textarea name='endereco'>" . $dados['endereco'] . "</textarea></td></tr>";
             echo "<tr><td>Usuário:</td>";
             echo "<td><input type='text' name='usuario' value='$dados[usuario]'></td></tr>";
             echo "<tr><td>Senha:</td><br>";

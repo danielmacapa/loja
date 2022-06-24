@@ -28,7 +28,7 @@ if (isset($_POST["atu"])) {
         echo "<script> alert('Cadastro atualizado com sucesso');
             location.href='/loja/index_menu.html'</script>";
     } else {
-        echo "<script>alert('Erro na atualização do cadastro');
-            location.href='../index_menu.html'</script>";
+        echo "<script>alert('Nenhum registro foi atualizado');
+            location.href='/loja/index_menu.html'</script>";
     }
 }

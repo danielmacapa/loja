@@ -33,7 +33,7 @@
             echo "<tr><td>Título:</td>";
             echo "<td><input type='text' name='titulo' value='$dados[titulo]'></td></tr>";
             echo "<tr><td>Descrição:</td>";
-            echo "<td><input type='textarea' name='descricao' value='$dados[descricao]'></td></tr>";
+            echo "<td><textarea name='descricao'>" . $dados['descricao'] . "</textarea></td></tr>";
             echo "<tr><td>Quantidade:</td>";
             echo "<td><input type='number' name='quantidade' value='$dados[quantidade]'></td></tr>";
             echo "<tr><td>Preço:</td>";
@@ -68,7 +68,7 @@
             echo "<script> alert('Removido com sucesso');
         location.href='/loja/index_menu.html'</script>";
         } else {
-            echo "<script>alert('Nenhum registro foi alterado');
+            echo "<script>alert('Erro na remoção');
         location.href='/loja/index_menu.html'</script>";
         }
     }

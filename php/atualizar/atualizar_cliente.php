@@ -1,7 +1,7 @@
 <?php
 
 // recupera os dados enviados pelo formulário (form_cliente)
-if (isset($_POST["atu"])){
+if (isset($_POST["atu"])) {
 
     $id = $_POST["id"];
     $nome = $_POST["nome"];
@@ -11,7 +11,7 @@ if (isset($_POST["atu"])){
     $endereco = $_POST["endereco"];
 
     // conexão com banco 
-    include ("../conexao.php");
+    include("../conexao.php");
 
     // query de atualização
     $query = "UPDATE clientes 
@@ -22,16 +22,11 @@ if (isset($_POST["atu"])){
     mysqli_query($host, $query);
 
     // verifica se houve inserção e direciona conforme o resultado
-        if(mysqli_affected_rows($host) <> 0){
-            echo "<script> alert('Cadastro atualizado com sucesso');
+    if (mysqli_affected_rows($host) <> 0) {
+        echo "<script> alert('Cadastro atualizado com sucesso');
             location.href='/loja/index_menu.html'</script>";
-        }
-        else{
-            echo "<script>alert('Erro na atualização do cadastro');
-            location.href='../index_menu.html'</script>";
-        }
-        
-
+    } else {
+        echo "<script>alert('Nenhum registro foi atualizado');
+            location.href='/loja/index_menu.html'</script>";
+    }
 }
-
-?>

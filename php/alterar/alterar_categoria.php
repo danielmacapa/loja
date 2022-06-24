@@ -31,7 +31,7 @@
             echo "<tr><td>Título:</td>";
             echo "<td><input type='text' name='nome' value='$dados[nome]'></td></tr>";
             echo "<tr><td>Descrição:</td>";
-            echo "<td><textarea name='descricao' value='$dados[descricao]'></textarea></td></tr>";
+            echo "<td><textarea name='descricao'>" . $dados['descricao'] . "</textarea></td></tr>";
             echo "</table><br>";
 
             echo "<input type='submit' name='atu' value='Atualizar'>";
